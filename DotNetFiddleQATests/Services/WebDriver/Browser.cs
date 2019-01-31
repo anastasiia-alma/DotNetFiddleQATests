@@ -13,6 +13,7 @@ namespace DotNetFiddleQATests.WebDriver
 
         public static void Init()
         {
+            //лучше использовать Nuget-пакеты с драйверами. Проще отслеживать версии браузеров и реп не распухает
             string driverPath = ConfigurationManager.AppSettings["DriverPath"];
                 switch (ConfigurationManager.AppSettings["Browser"])
                 {
@@ -38,7 +39,9 @@ namespace DotNetFiddleQATests.WebDriver
 
         public static void LoadApplication()
         {
-            Driver.Url = ConfigurationManager.AppSettings["URL"]; ;
+            //по-хорошему, "драйвер" самостоятельная сущность и может работать
+            //с разными проектами. Не стоит хардкодить какие-то урлы в этом классе
+            Driver.Url = ConfigurationManager.AppSettings["URL"];
         }
 
         public static void Close()
