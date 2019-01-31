@@ -4,10 +4,8 @@ using SeleniumExtras.PageObjects;
 
 namespace DotNetFiddleQATests.Pages
 {
-    class GettingStartedPage
+    class GettingStartedPage : PageBase
     {
-        private IWebDriver driver = Browser.Driver;
-
         [FindsBy(How = How.XPath, Using = "//a[text()[contains(.,'Back To Editor')]]")]
         private IWebElement backToEditorButton;
 
@@ -16,11 +14,6 @@ namespace DotNetFiddleQATests.Pages
 
         [FindsBy(How = How.XPath, Using = "//a[@id='run-button']")]
         private IWebElement searchButton;
-
-        public GettingStartedPage()
-        {
-            PageFactory.InitElements(driver, this);
-        }
 
         public bool IsOpened()
         {

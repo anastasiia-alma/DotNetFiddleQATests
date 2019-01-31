@@ -1,13 +1,10 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using DotNetFiddleQATests.WebDriver;
 
 namespace DotNetFiddleQATests.Pages
 {
-    class SignUpPage
+    class SignUpPage : PageBase 
     {
-        private readonly IWebDriver driver = Browser.Driver;
-
         [FindsBy(How = How.XPath, Using = "//div[@id='signup-options']/a[text()[contains(.,'Twitter')]]")]
         public IWebElement openTwittterButton;
 
@@ -19,11 +16,5 @@ namespace DotNetFiddleQATests.Pages
 
         [FindsBy(How = How.XPath, Using = "//div[@id='signup-options']/a[text()[contains(.,'.NET Fiddle')]]")]
         private IWebElement openDotNetFiddlerButton;
-
-        public SignUpPage()
-        {
-            PageFactory.InitElements(driver, this);
-        }
-
     }
 }

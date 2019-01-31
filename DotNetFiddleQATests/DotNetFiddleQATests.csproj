@@ -106,6 +106,7 @@
   <ItemGroup>
     <Compile Include="Pages\GettingStartedPage.cs" />
     <Compile Include="Pages\MainPage.cs" />
+    <Compile Include="Pages\PageBase.cs" />
     <Compile Include="Pages\SignUpPage.cs" />
     <Compile Include="Tests\TestsForFillReportFixture.cs" />
     <Compile Include="Tests\UI\MainPageTests.cs" />

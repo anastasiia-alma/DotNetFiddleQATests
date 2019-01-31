@@ -9,22 +9,13 @@ using SeleniumExtras.PageObjects;
 
 namespace DotNetFiddleQATests.Pages
 {
-    class MainPage
-    {
-        private readonly IWebDriver driver = Browser.Driver;
-
+    class MainPage : PageBase {
         [FindsBy(How = How.XPath, Using = ".//a[text()[contains(.,'Getting Started')]]")]
         private IWebElement gettingStartedButton;
-
-        public MainPage()
-        {
-            PageFactory.InitElements(driver, this);
-        }
 
         public void ClickOnGettingStartedButton()
         {
 	        gettingStartedButton.Click("'Getting Started' Button");
         }
-
     }
 }
