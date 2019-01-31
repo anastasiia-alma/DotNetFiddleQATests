@@ -107,10 +107,13 @@
     <Compile Include="Pages\GettingStartedPage.cs" />
     <Compile Include="Pages\MainPage.cs" />
     <Compile Include="Pages\SignUpPage.cs" />
-    <Compile Include="Tests\MainPageTests.cs" />
+    <Compile Include="Tests\TestsForFillReportFixture.cs" />
+    <Compile Include="Tests\UI\MainPageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\WebDriver\Browser.cs" />
     <Compile Include="Services\WebDriver\WebElementExtentions.cs" />
+    <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Tests\UI\UiTestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
