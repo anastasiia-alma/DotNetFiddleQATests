@@ -13,7 +13,7 @@ namespace DotNetFiddleQATests.Pages
     {
         private readonly IWebDriver driver = Browser.Driver;
 
-        [FindsBy(How = How.XPath, Using = "//a[text()[contains(.,'Getting Started')]]")]
+        [FindsBy(How = How.XPath, Using = ".//a[text()[contains(.,'Getting Started')]]")]
         private IWebElement gettingStartedButton;
 
         public MainPage()
