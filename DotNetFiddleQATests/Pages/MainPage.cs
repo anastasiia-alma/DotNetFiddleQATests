@@ -23,7 +23,7 @@ namespace DotNetFiddleQATests.Pages
 
         public void ClickOnGettingStartedButton()
         {
-           driver.FindElement(By.XPath("//a[text()[contains(.,'Getting Started')]]"), 3).Click("'Getting Started' Button");
+	        gettingStartedButton.Click("'Getting Started' Button");
         }
 
     }
